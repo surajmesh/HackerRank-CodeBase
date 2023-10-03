@@ -1,0 +1,20 @@
+# Given the names and grades of each student in a class of  students
+python_students = [['Harry', 37.21], ['Berry', 37.21], ['Tina', 37.2], ['Akriti', 41], ['Harsh', 39]]
+
+# Find the Second Lowest grade in the List
+second_lowest_score = sorted(set([score for student,score in python_students]))[1]
+#print("second lowest grade: ",second_lowest_score)
+
+#Get names of students with the second lowest grade
+
+second_lowest_name = []
+for name in python_students:
+    if second_lowest_score == name[1]:
+        second_lowest_name.append(name[0])
+
+#print(second_lowest_name)
+
+# Print names in alphabetical order
+
+for name in sorted(second_lowest_name):
+    print(name)
